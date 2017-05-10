@@ -1,0 +1,24 @@
+group 'com.sunny'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12',
+            'org.robolectric:robolectric:3.1.1',
+            'org.easymock:easymock:3.4',
+            "org.powermock:powermock:${powerMockVersion}",
+            "org.powermock:powermock-module-junit4:${powerMockVersion}",
+            "org.powermock:powermock-api-mockito:${powerMockVersion}",
+            "org.powermock:powermock-api-easymock:${powerMockVersion}"
+
+    compile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'io.reactivex', name: 'rxjava', version: '1.2.6'
+    compile group: 'org.mockito', name: 'mockito-core', version: '2.7.6'
+}
